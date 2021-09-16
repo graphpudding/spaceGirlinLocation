@@ -1,0 +1,37 @@
+@import '~normalize.css';
+
+// FONTS
+@import './fonts.scss';
+
+// VARIABLES
+$main-color: tomato;
+// INITIAL
+.container {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+#babylon,#glslCanvas{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  left: 0px;
+  top: 0px;
+}
+#glslCanvas{
+  z-index: 1000000;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 15%;
+  opacity: 0;
+  transition: opacity .7s;
+}
+#glslCanvas.active{
+  opacity: 1;
+}
+// FILES
+
+@import 'components/main';
+@import 'components/logo';
